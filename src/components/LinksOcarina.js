@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-
-
-const API = 'AIzaSyBl0mm52UhMqMsVGIqj-k7al-C96YJc684'
+require('dotenv').config()
+console.log(process.env.REACT_APP_API_KEY)
+const API_KEY = process.env.REACT_APP_API_KEY
 const channelId= 'UCEFPJ3Qc_0tvKQBYDO-UKvQ'
 const result = 10
 
 
 
 
-let finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${result}`
+let finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${result}`
 
 class LinkOcarina extends Component {
 
