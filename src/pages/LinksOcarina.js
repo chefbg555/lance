@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 require('dotenv').config()
 const API_KEY = process.env.REACT_APP_API_KEY
 const channelId= 'UCEFPJ3Qc_0tvKQBYDO-UKvQ'
-const result = 10
-
-
+const result = 25
 
 
 let finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${result}`
@@ -17,9 +15,8 @@ class LinkOcarina extends Component {
     this.state = {
       resultyt: []
     }
-    this.clicked = this.clicked.bind(this)
   }
-  clicked(){
+    componentDidMount(){
     fetch(finalURL)
     .then((response) => response.json())
     .then((responseJson) => {
@@ -35,10 +32,9 @@ class LinkOcarina extends Component {
 
   render() {
     // console.log(finalURL)
-    console.log(this.state.resultyt)
+
     return (
       <div>
-        <button onClick={this.clicked}>Team Link</button>
           {
           this.state.resultyt.map((link, i) => {
             console.log(link)

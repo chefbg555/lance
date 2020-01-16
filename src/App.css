@@ -1,1 +1,58 @@
+body{
+  margin:0;
+  height:100vh;
+  overflow-x: initial;
+  background-image:url(./images/runescape.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
 
+
+@import url("https://fonts.googleapis.com/css?family=MedievalSharp&display=swap");
+
+.home-header{
+  text-align: center;
+  font-size: 60px;
+  font-family:'MedievalSharp', cursive;
+  margin-top:2rem;
+}
+.home{
+  display:flex;
+  justify-content: space-between;
+  margin-left:3vw;
+  margin-right:3vw;
+  margin-bottom:1rem;
+}
+
+.rargh-home{
+  cursor: pointer;
+  border:none;
+  outline: none;
+}
+.link-home{
+  cursor:pointer;
+  border:none;
+  outline:none;
+}
+.link-button-div{
+  text-align: center;
+}
+.rargh-button-div{
+  text-align: center;
+}
+.home h1{
+  font-size:4rem;
+  font-family: 'MedievalSharp', cursive;
+}
+
+
+
+.youtube{
+  display:flex;
+  justify-content: center space-between;
+
+
+}

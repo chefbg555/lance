@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/Home'
 import LinksOcarina from './pages/LinksOcarina';
 import Rargh from './pages/Rargh'
+
 class App extends Component {
   render() {
     return(
