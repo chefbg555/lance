@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 require('dotenv').config()
-console.log(process.env.REACT_APP_API_KEY)
 const API_KEY = process.env.REACT_APP_API_KEY
 const channelId= 'UCEFPJ3Qc_0tvKQBYDO-UKvQ'
 const result = 10
@@ -43,7 +42,7 @@ class LinkOcarina extends Component {
           {
           this.state.resultyt.map((link, i) => {
             console.log(link)
-            let frame = <div key={i} className="youtube"><iframe title="linkO" width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
+            let frame = <div key={i} className="youtube"><iframe title="linkO" width="300" height="200" src={link} frameBorder="0" allowFullScreen></iframe></div>
             return frame
           })
           }

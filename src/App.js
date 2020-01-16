@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
+import  {BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css';
-import LinkOcarina from './components/LinksOcarina';
-import Rargh from './components/Rargh'
+import Home from './pages/Home'
+import LinksOcarina from './pages/LinksOcarina';
+import Rargh from './pages/Rargh'
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h2>What team are you</h2>
-        </div>
-        <LinkOcarina/>
-        <Rargh/>
-      </div>
+    return(
+    <BrowserRouter>
+      <Switch>
+        <Route exact path= "/" component={Home}/>
+        <Route path= "/linksocarina" component={LinksOcarina}/>
+        <Route path= "/rargh" component={Rargh}/>
+      </Switch>
+    </BrowserRouter>
     )
   }
 }
