@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Typist from 'react-typist'
 require('dotenv').config()
 const API_KEY = process.env.REACT_APP_API_KEY
 const channelId= 'UCEFPJ3Qc_0tvKQBYDO-UKvQ'
@@ -34,17 +35,24 @@ class LinkOcarina extends Component {
     // console.log(finalURL)
 
     return (
-      <div>
-          {
-          this.state.resultyt.map((link, i) => {
-            console.log(link)
-            let frame = <div key={i} className="youtube"><iframe title="linkO" width="300" height="200" src={link} frameBorder="0" allowFullScreen></iframe></div>
-            return frame
-          })
-          }
-     </div>
+      <div className="link-header"><h1 className="link-header-h1">TEAM LINK</h1>
+        <div className="last-vids"><h3>Last 25 videos</h3></div>
+          <div  className="link-stats"><Typist cursor={{hideWhenDone:true}}>
+            I need help with stats to go here........Im going to put youtube info but waiting till I get  the record for W/L
+            </Typist> 
+            <div className="yotube-link">
+                {
+                this.state.resultyt.map((link, i) => {
+                  console.log(link)
+                  let frame = <div key={i} className="youtube"><iframe title="linkO" width="560" height="315" src={link} frameBorder="0" allowFullScreen></iframe></div>
+                  return frame
+                })
+                }  
+            </div>
+          </div>
+      </div>
     )
-  }
+  } 
 }
 
 export default LinkOcarina
