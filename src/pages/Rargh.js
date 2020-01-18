@@ -4,7 +4,7 @@ require('dotenv').config()
 
 
 
-const API_KEY = process.env.REACT_APP_API_KEY
+const API_KEY = 'AIzaSyBl0mm52UhMqMsVGIqj-k7al-C96YJc684'
 const channelId= 'UCepFoY2QjSR5SlMnKGlzJtg'
 const result = 25
 let finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${result}`
